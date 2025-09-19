@@ -3,7 +3,7 @@ function volume_sphere(e) {
 	e.preventDefault();
 	let r=parseFloat(document.getElementById("radius").value);
 	if(r<=0 || isNaN(r)){
-		alert("Please enter a valid positive number for radius.");
+		document.getElementById("volume").value = "NaN";
 		return;
 	}
 	let volume=(4/3)*(Math.PI)*(r*r*r);
